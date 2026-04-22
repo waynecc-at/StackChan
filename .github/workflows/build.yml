@@ -15,9 +15,7 @@ jobs:
           submodules: recursive
 
       - name: Install IDF
-        uses: espressif/esp-idf-actions/setup-esp-idf@v1.2.0
-        with:
-          version: v5.5.4
+        uses: espressif/install-esp-idf-action@v1
 
       - name: Fetch dependencies
         run: |

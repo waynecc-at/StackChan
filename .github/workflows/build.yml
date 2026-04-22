@@ -16,6 +16,7 @@ jobs:
 
       - name: Checkout submodules
         run: |
+          git config --global --add safe.directory /__w/StackChan/StackChan
           git submodule update --init --recursive
 
       - name: Fetch dependencies

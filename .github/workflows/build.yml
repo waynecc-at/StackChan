@@ -26,8 +26,9 @@ jobs:
 
       - name: Build ESP32-S3
         run: |
-          cd firmware
           . $IDF_PATH/export.sh
+          $IDF_PATH/tools/idf_tools.py install --targets=esp32s3
+          cd firmware
           idf.py -DIDF_TARGET=esp32s3 build
 
       - name: Upload build artifacts

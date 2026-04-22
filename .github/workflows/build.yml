@@ -25,9 +25,12 @@ jobs:
           python3 fetch_repos.py
 
       - name: Build ESP32-S3
+        env:
+          IDF_PATH: /opt/esp-idf
         run: |
-          cd firmware
+          . /opt/esp-idf/install.sh esp-idf
           . /opt/esp-idf/export.sh
+          cd firmware
           idf.py -DIDF_TARGET=esp32s3 build
 
       - name: Upload build artifacts

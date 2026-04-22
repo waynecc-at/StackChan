@@ -16,6 +16,8 @@ jobs:
 
       - name: Install IDF
         uses: espressif/install-esp-idf-action@v1
+        with:
+          version: v5.5.4
 
       - name: Fetch dependencies
         run: |
